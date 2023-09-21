@@ -11,7 +11,7 @@ const StatisticLine = (props) => {
     <tbody>
       <tr>
         <td>{props.text}</td>
-        <td>{props.value}</td>
+        <td>{props.value} {props.symbol}</td>
       </tr>
     </tbody>
   )
@@ -25,7 +25,7 @@ const Statistics = (props) => {
     <StatisticLine text='bad' value={props.bad} />
     <StatisticLine text='all' value={props.total} />
     <StatisticLine text='average' value={props.average} />
-    <StatisticLine text='positive' value={props.percent} />
+    <StatisticLine text='positive' value={props.percent} symbol='%' />
     </table>
   )
 }
